@@ -8,7 +8,9 @@ $(function () {
             xAxis: {
                 type: 'datetime'
             },
-            series: data
+            series: [{
+                data:data[17]
+            }]
         });
     });
 
