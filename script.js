@@ -9,7 +9,7 @@ $(function () {
                 type: 'datetime'
             },
             series: [{
-                data:data[17]
+                data:data['17']
             }]
         });
     });
