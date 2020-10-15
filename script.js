@@ -9,7 +9,7 @@ $(function () {
                 type: 'datetime'
             },
             series: [{
-                data:data['17'].map(function(val){return [val[0],int(datetime.datetime.strptime(val[1], "%Y-%m-%d %H:%M:%S").strftime('%s')) * 1000]})
+                data:data['17'].map(function(val){return [val[0],new Date(val[1]).getTime()]})
             }]
         });
     });
