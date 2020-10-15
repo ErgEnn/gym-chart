@@ -9,7 +9,7 @@ $(function () {
                 type: 'datetime'
             },
             series: [{
-                data:data['17'].map(function(val){return [val[0],new Date(val[1]).getTime()]})
+                data:data['17'].map(function(val){return [new Date(val[1]).getTime(),val[0]]})
             }]
         });
     });
