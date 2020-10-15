@@ -9,7 +9,14 @@ $(function () {
                 type: 'datetime'
             },
             series: [{
-                data:data['17'].map(function(val){return [new Date(val[1]).getTime(),val[0]]})
+                name:"Tehnopol",
+                data:data['18'].map(function(val){return [new Date(val[1]).getTime(),val[0]]})
+            },{
+                name:"Vanalinn",
+                data:data['374'].map(function(val){return [new Date(val[1]).getTime(),val[0]]})
+            },{
+                name:"Ülemistel",
+                data:data['491'].map(function(val){return [new Date(val[1]).getTime(),val[0]]})
             }]
         });
     });
