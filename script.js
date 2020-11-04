@@ -9,9 +9,9 @@ $(function () {
     jQuery.getJSON("https://gym-count.azurewebsites.net/api/month-statistics", function (data) {
         tehnopol.series[0].setData(data['18']);
         tehnopol.hideLoading();
-        ylemiste.series[0].setData(data['374']);
+        ylemiste.series[0].setData(data['491']);
         ylemiste.hideLoading();
-        vanalinn.series[0].setData(data['491']);
+        vanalinn.series[0].setData(data['374']);
         vanalinn.hideLoading();
     });
 });
