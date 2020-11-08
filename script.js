@@ -5,6 +5,8 @@ $(function () {
     ylemiste.showLoading();
     var vanalinn = Highcharts.chart('vanalinn', getChartTemplate('Vanalinn'));
     vanalinn.showLoading();
+    var all = Highcharts.chart('all', getChartTemplate('Kõik'));
+    all.showLoading();
 
     jQuery.getJSON("https://gym-count.azurewebsites.net/api/month-statistics", function (data) {
         tehnopol.series[0].setData(data['18']);
@@ -13,6 +15,8 @@ $(function () {
         ylemiste.hideLoading();
         vanalinn.series[0].setData(data['374']);
         vanalinn.hideLoading();
+        all.series[0].setData(data['-1']);
+        all.hideLoading();
     });
 });
 
