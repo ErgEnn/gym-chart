@@ -7,15 +7,18 @@ $(function () {
     vanalinn.showLoading();
     var allTemplate = getChartTemplate('Kõik');
     allTemplate.colorAxis={stops:[
-        [0,"rgb(153,255,102)"],
-        [0.05,"rgb(153,255,102)"],
-        [0.06,"rgb(0,204,0)"],
-        [0.2,"rgb(0,204,0)"],
-        [0.21,"rgb(255,255,0)"],
-        [0.39,"rgb(255,255,0)"],
-        [0.4,"rgb(255,51,0)"],
-        [1,"rgb(255,51,0)"],
-    ]};
+        [0,"#004015"],
+        [0.05,"#004015"],
+        [0.06,"#00ff55"],
+        [0.2,"#00ff55"],
+        [0.21,"#ffd400"],
+        [0.39,"#ffd400"],
+        [0.4,"#ff00ab"],
+        [0.54,"#ff00ab"],
+        [0.55,"#ff006a"],
+        [1,"#ff006a"],
+    ],
+        max:100};
     var all = Highcharts.chart('all',allTemplate );
     all.showLoading();
 
