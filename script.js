@@ -5,8 +5,8 @@ $(function () {
     ylemiste.showLoading();
     var vanalinn = Highcharts.chart('vanalinn', getChartTemplate('Vanalinn'));
     vanalinn.showLoading();
-    var all = Highcharts.chart('all', getChartTemplate('Kõik'));
-    all.colorAxis={stops:[
+    var allTemplate = getChartTemplate('Kõik');
+    allTemplate.colorAxis={stops:[
         [0,"rgb(153,255,102)"],
         [0.05,"rgb(153,255,102)"],
         [0.06,"rgb(0,204,0)"],
@@ -16,6 +16,7 @@ $(function () {
         [0.4,"rgb(255,51,0)"],
         [1,"rgb(255,51,0)"],
     ]};
+    var all = Highcharts.chart('all',allTemplate );
     all.showLoading();
 
     jQuery.getJSON("https://gym-count.azurewebsites.net/api/month-statistics", function (data) {
