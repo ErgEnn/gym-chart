@@ -6,6 +6,7 @@ $(function () {
     var vanalinn = Highcharts.chart('vanalinn', getChartTemplate('Vanalinn'));
     vanalinn.showLoading();
     var allTemplate = getChartTemplate('Kõik');
+    allTemplate.chart.width = 890;
     allTemplate.colorAxis={stops:[
         [0,"#004015"],
         [0.05,"#004015"],
