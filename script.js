@@ -6,6 +6,16 @@ $(function () {
     var vanalinn = Highcharts.chart('vanalinn', getChartTemplate('Vanalinn'));
     vanalinn.showLoading();
     var all = Highcharts.chart('all', getChartTemplate('Kõik'));
+    all.colorAxis={stops:[
+        [0,"rgb(153,255,102)"],
+        [0.05,"rgb(153,255,102)"],
+        [0.06,"rgb(0,204,0)"],
+        [0.2,"rgb(0,204,0)"],
+        [0.21,"rgb(255,255,0)"],
+        [0.39,"rgb(255,255,0)"],
+        [0.4,"rgb(255,51,0)"],
+        [1,"rgb(255,51,0)"],
+    ]};
     all.showLoading();
 
     jQuery.getJSON("https://gym-count.azurewebsites.net/api/month-statistics", function (data) {
@@ -95,7 +105,7 @@ var chart_template = {
 
     tooltip: {
         formatter: function () {
-            return '<b>' + getPointCategoryName(this.point, 'y') + '</b> kell <br><b>' + getPointCategoryName(this.point, 'x') + '</b> oli klubis <br><b>' + this.series.name + '</b> inimesi <br><b>' + this.point.value + '</b>';
+            return '<b>' + getPointCategoryName(this.point, 'y') + '</b> kell <br><b>' + getPointCategoryName(this.point, 'x') + '</b> oli klubis <br><b>' + this.series.name + '</b> inimesi keskmiselt<br><b>' + this.point.value + '</b>';
         }
     },
 
